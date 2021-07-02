@@ -1,4 +1,4 @@
-# Template is by Bedimcode
+# JTKH Portfolio, credits to Bedimcode for template and design.
 
 # Responsive Portfolio Website Alexa
 ## [Watch it on youtube](https://youtu.be/27JtRAI3QO8)
