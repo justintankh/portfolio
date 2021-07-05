@@ -213,8 +213,8 @@ function submitForm(e) {
         return alert("Please fill up all blanks.");
     }
 
-    document.querySelector(".contact-form").reset();
     sendEmail(name, email, subject, message);
+    document.querySelector(".contact-form").reset();
 }
 
 // Send Email Info
