@@ -194,3 +194,38 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== SMTP JS ====================*/
+
+// Listen for a submit
+document.querySelector(".contact-form").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    // Get input Values
+    let name = document.querySelector(".name").value;
+    let email = document.querySelector(".email").value;
+    let subject = document.querySelector(".subject").value;
+    let message = document.querySelector(".message").value;
+
+    if (!name || !email || !subject || !message) {
+        return alert("Please fill up all blanks.");
+    }
+
+    document.querySelector(".contact-form").reset();
+    sendEmail(name, email, subject, message);
+}
+
+// Send Email Info
+function sendEmail(name, email, subject, message) {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: 'justintankoonhan@gmail.com',
+        Password: "qrqpdxivwytqpaha",
+        To: 'justintankoonhan@gmail.com',
+        From: 'justintankoonhan@gmail.com',
+        Subject: `Portfolio Contact Form: '${subject}'`,
+        Body: `Name: ${name} <br/> Email: ${email} <br/> Subject: ${subject} <br/><br/> Message: <br/>${message}`,
+    }).then((message) => alert("Your message has been sent successfully."))
+}

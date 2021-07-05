@@ -976,6 +976,19 @@ img {
     color: red;
 }
 
+.submit__button {
+    border: 0rem;
+    cursor: pointer;
+    font: var(--body-font);
+    font-size: var(--normal-font-size);
+    /* font-weight: var(--font-semi-bold); */
+}
+
+.submit__button:hover .submit__button_icon {
+    display: inline-block;
+    transform: translateX(.3rem);
+}
+
 
 /*==================== FOOTER ====================*/
 
