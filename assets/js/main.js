@@ -223,7 +223,7 @@ function sendEmail(name, email, subject, message) {
         Host: "smtp.gmail.com",
         Username: 'justintankoonhan@gmail.com',
         Password: "qrqpdxivwytqpaha",
-        To: 'justintankoonhan@gmail.com',
+        To: 'justintankh@gmail.com',
         From: 'justintankoonhan@gmail.com',
         Subject: `Portfolio Contact Form: '${subject}'`,
         Body: `Name: ${name} <br/> Email: ${email} <br/> Subject: ${subject} <br/><br/> Message: <br/>${message}`,
