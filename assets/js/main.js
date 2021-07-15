@@ -218,14 +218,20 @@ function submitForm(e) {
 }
 
 // Send Email Info
+
 function sendEmail(name, email, subject, message) {
     Email.send({
-        Host: "smtp.gmail.com",
-        Username: 'justintankoonhan@gmail.com',
-        Password: "qrqpdxivwytqpaha",
+        SecureToken: '6c82676d-dbe9-4e8d-b1d6-a3a4f5ccc5a7',
         To: 'justintankh@gmail.com',
-        From: 'justintankoonhan@gmail.com',
+        From: `${email}`,
         Subject: `Portfolio Contact Form: '${subject}'`,
         Body: `Name: ${name} <br/> Email: ${email} <br/> Subject: ${subject} <br/><br/> Message: <br/>${message}`,
-    }).then((message) => alert("Your message has been sent successfully."))
+    }).then((message) => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Sent successfully !',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    });
 }
