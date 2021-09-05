@@ -463,12 +463,14 @@ img {
 }
 
 .about__info {
+    /* outline: 1px solid blue; */
     display: flex;
     justify-content: space-evenly;
     margin-bottom: var(--mb-2-5);
 }
 
 .about__info-title {
+    /* outline: 1px solid white; */
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
